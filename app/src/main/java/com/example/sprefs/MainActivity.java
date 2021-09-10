@@ -32,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
             editor.apply();
         });
 
+        SharedPreferences getShareData = getSharedPreferences(MESSAGE_ID, MODE_PRIVATE);
+        String value = getShareData.getString("message", "Nothing");
+
+        showMessageTextView.setText(value);
 
 
     }
